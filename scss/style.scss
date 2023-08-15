@@ -80,6 +80,22 @@ $greenColorHover: #448d3d;
 		border-radius: 10px;
 	}
 }
+.title {
+	font-size: 48px;
+	font-weight: 700;
+	line-height: (55/48 * 100%);
+	color: $lightGreyColor;
+	@media (max-width: 992px) {
+		font-size: 42px;
+	}
+	@media (max-width: 550px) {
+		font-size: 30px;
+		text-align: center;
+	}
+	@media (max-width: 425px) {
+		font-size: 24px;
+	}
+}
 // ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ
 
 // HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER
@@ -222,7 +238,7 @@ $greenColorHover: #448d3d;
 		transition: color 0.3s ease 0s;
 		@media (any-hover: hover) {
 			&:hover {
-				color: $blackColor;
+				color: $lightGreyColor;
 			}
 		}
 		@media (max-width: 992px) {
@@ -322,13 +338,13 @@ $greenColorHover: #448d3d;
 		@media (max-width: 550px) {
 			font-size: 36px;
 			max-width: none;
+			text-align: center;
 			&:not(:last-child) {
 				margin-bottom: 20px;
 			}
 		}
 		@media (max-width: 425px) {
 			font-size: 27px;
-			max-width: none;
 			padding-top: 30px;
 		}
 	}
@@ -344,6 +360,8 @@ $greenColorHover: #448d3d;
 			margin-bottom: 70px;
 		}
 		@media (max-width: 550px) {
+			text-align: center;
+			max-width: none;
 			&:not(:last-child) {
 				margin-bottom: 50px;
 			}
@@ -351,26 +369,31 @@ $greenColorHover: #448d3d;
 		@media (max-width: 425px) {
 			font-size: 14px;
 			max-width: none;
+			&:not(:last-child) {
+				margin-bottom: 25px;
+			}
 		}
 	}
 
 	// .main-page__btn
 
 	&__btn {
+		@media (max-width: 550px) {
+			display: flex;
+			justify-content: center;
+		}
 	}
 }
 //========================================================================================================================================================
 
 .about-us {
-	padding: 125px 0;
-	@media (max-width: 992px) {
-		padding: 70px 0;
-	}
+	padding: 70px 0;
+
 	@media (max-width: 525px) {
-		padding: 50px 0;
+		padding: 25px 0;
 	}
 	@media (max-width: 425px) {
-		padding: 30px 0;
+		padding: 15px 0;
 	}
 	// .about-us__container
 
@@ -423,24 +446,9 @@ $greenColorHover: #448d3d;
 	&__item {
 	}
 }
-.title {
-	font-size: 48px;
-	font-weight: 700;
-	line-height: (55/48 * 100%);
-	color: $blackColor;
-	@media (max-width: 992px) {
-		font-size: 42px;
-	}
-	@media (max-width: 550px) {
-		font-size: 30px;
-	}
-	@media (max-width: 425px) {
-		font-size: 24px;
-	}
-}
 
 .item-about-us {
-	color: $blackColor;
+	color: $lightGreyColor;
 
 	// .item-about-us__img
 
@@ -495,3 +503,214 @@ $greenColorHover: #448d3d;
 	}
 }
 //========================================================================================================================================================
+
+.contacts {
+	padding: 70px 0;
+	@media (max-width: 525px) {
+		padding: 25px 0;
+	}
+	@media (max-width: 425px) {
+		padding: 15px 0;
+	}
+	// .contacts__container
+
+	&__container {
+	}
+
+	// .contacts__title
+
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: 100px;
+		}
+		@media (max-width: 992px) {
+			&:not(:last-child) {
+				margin-bottom: 70px;
+			}
+		}
+		@media (max-width: 767px) {
+			&:not(:last-child) {
+				margin-bottom: 50px;
+			}
+		}
+		@media (max-width: 425px) {
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	// .contacts__row
+
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media (max-width: 525px) {
+			flex-direction: column;
+			row-gap: 15px;
+		}
+	}
+
+	// .contacts__column
+
+	&__column {
+		&:first-child {
+			flex: 0 0 230px;
+		}
+		&:not(:last-child) {
+			margin-right: 50px;
+		}
+		@media (max-width: 550px) {
+			&:first-child {
+				flex: 0 0 170px;
+			}
+			&:not(:last-child) {
+				margin-right: 15px;
+			}
+		}
+		@media (max-width: 525px) {
+			text-align: center;
+			&:first-child {
+				flex: 1 1 auto;
+			}
+		}
+	}
+
+	// .contacts__item
+
+	&__item {
+	}
+}
+
+.item-contacts {
+	// .item-contacts__link
+
+	&__link {
+		a {
+			color: $lightGreyColor;
+			transition: color 0.3s ease 0s;
+			@media (any-hover: hover) {
+				&:hover {
+					color: $greenColor;
+				}
+			}
+		}
+		font-size: 24px;
+		font-weight: 600;
+		line-height: (28/24 * 100%);
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+		@media (max-width: 550px) {
+			font-size: 18px;
+		}
+	}
+
+	// .item-contacts__text
+
+	&__text {
+		font-size: 18px;
+		font-weight: 600;
+		line-height: (24/18 * 100%);
+		color: $lightGreyColor;
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+		@media (max-width: 550px) {
+			font-size: 14px;
+		}
+
+		// .item-contacts__text_email
+
+		&_email {
+			a {
+				color: $lightGreyColor;
+			}
+		}
+
+		// .item-contacts__text_fax
+
+		&_fax {
+		}
+
+		// .item-contacts__text_adress
+
+		&_adress {
+		}
+	}
+}
+//========================================================================================================================================================
+
+.footer {
+	padding: 30px 0;
+	background-color: $greenColor;
+	// .footer__container
+
+	&__container {
+	}
+
+	// .footer__logo
+
+	&__logo {
+		font-size: 27px;
+		font-weight: 600;
+		line-height: (30/27 * 100%);
+		a {
+			color: $whiteColor;
+		}
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+		@media (max-width: 767px) {
+			text-align: center;
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	// .footer__row
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		gap: 30px 15px;
+		@media (max-width: 767px) {
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	// .footer__column
+
+	&__column {
+		@media (max-width: 767px) {
+			flex: 1 1 100%;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+	}
+
+	// .footer__link
+
+	&__link {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+		a {
+			color: $whiteColor;
+			transition: color 0.3s ease 0s;
+			@media (any-hover: hover) {
+				&:hover {
+					color: $lightGreyColor;
+				}
+			}
+		}
+		&_w {
+			font-weight: 600;
+		}
+	}
+}
