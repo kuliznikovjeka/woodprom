@@ -577,6 +577,11 @@ body._lock {
   color: #252525;
 }
 
+.item-about-us__img img {
+  max-width: 132px;
+  max-height: 100px;
+}
+
 .item-about-us__img:not(:last-child) {
   margin-bottom: 40px;
 }

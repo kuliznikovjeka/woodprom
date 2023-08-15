@@ -445,6 +445,10 @@ $greenColorHover: #448d3d;
 	// .item-about-us__img
 
 	&__img {
+		img {
+			max-width: 132px;
+			max-height: 100px;
+		}
 		&:not(:last-child) {
 			margin-bottom: 40px;
 		}
