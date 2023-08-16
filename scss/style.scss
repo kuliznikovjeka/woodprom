@@ -516,6 +516,12 @@ $greenColorHover: #448d3d;
 		&:not(:first-child) {
 			margin-top: 20px;
 		}
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $greenColorHover;
+			}
+		}
 		@media (max-width: 550px) {
 			font-size: 14px;
 			text-align: center;
@@ -781,6 +787,126 @@ $greenColorHover: #448d3d;
 	}
 }
 //========================================================================================================================================================
+.maps {
+	padding: 70px 0 140px 0;
+	@media (max-width: 525px) {
+		padding: 25px 0 50px 0;
+	}
+	@media (max-width: 425px) {
+		padding: 15px 0 30px 0;
+	}
+	// .maps__container
+
+	&__container {
+	}
+
+	// .maps__title
+
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: 100px;
+		}
+		@media (max-width: 992px) {
+			&:not(:last-child) {
+				margin-bottom: 70px;
+			}
+		}
+		@media (max-width: 767px) {
+			&:not(:last-child) {
+				margin-bottom: 50px;
+			}
+		}
+		@media (max-width: 425px) {
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	// .maps__row
+
+	&__row {
+		display: flex;
+		column-gap: 40px;
+		@media (max-width: 767px) {
+			flex-direction: column;
+			row-gap: 15px;
+		}
+	}
+
+	// .maps__column
+
+	&__column {
+		flex: 1 1 50%;
+		@media (max-width: 767px) {
+			flex: 1 1 100%;
+		}
+	}
+
+	// .maps__body
+
+	&__body {
+		display: flex;
+		column-gap: 15px;
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+		@media (max-width: 550px) {
+			justify-content: center;
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	// .maps__link
+
+	&__link {
+		font-size: 18px;
+		line-height: (33/18 * 100%);
+		font-weight: 700;
+		color: $greenColor;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $greenColorHover;
+			}
+		}
+		@media (max-width: 550px) {
+			font-size: 16px;
+			text-align: center;
+		}
+		// .maps__link_under
+		&_under {
+			text-decoration: underline;
+		}
+	}
+
+	// .maps__img
+
+	&__img {
+		img {
+			max-width: 100%;
+			width: 100%;
+		}
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+
+	// .maps__text
+
+	&__text {
+		font-size: 18px;
+		font-weight: 500;
+		line-height: (33/18 * 100%);
+		color: $lightGreyColor;
+		@media (max-width: 550px) {
+			font-size: 14px;
+			text-align: center;
+		}
+	}
+}
 
 //========================================================================================================================================================
 
