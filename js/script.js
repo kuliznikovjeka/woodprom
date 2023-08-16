@@ -62,6 +62,19 @@ document.querySelectorAll('a[href*="#"]').forEach(link => {
 // ПЛАВНЫЙ СКРОЛЛ + ЗАКРЫВАЮЩЕЕСЯ БУРГЕР МЕНЮ ПЛАВНЫЙ СКРОЛЛ + ЗАКРЫВАЮЩЕЕСЯ БУРГЕР МЕНЮ ПЛАВНЫЙ СКРОЛЛ + ЗАКРЫВАЮЩЕЕСЯ БУРГЕР МЕНЮ
 
 
+// МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО
+
+document.getElementById('open-modal').addEventListener('click', function () {
+	document.getElementById('my-modal').classList.add('_open')
+})
+
+document.getElementById('close-my-modal-btn').addEventListener('click', function () {
+	document.getElementById('my-modal').classList.remove('_open')
+})
+
+// МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО
+
+
 //СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР
 function initSliders() {
 	if (document.querySelector('.cases__slider.swiper')) {
@@ -121,45 +134,7 @@ window.addEventListener("load", function (e) {
 });
 //СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР СЛАЙДЕР
 
-// АККОРДЕОН АККОРДЕОН АККОРДЕОН АККОРДЕОН АККОРДЕОН АККОРДЕОН АККОРДЕОН АККОРДЕОН АККОРДЕОН АККОРДЕОН
 
-document.addEventListener('DOMContentLoaded', () => {
-	// 1) Получаем в константу все аккордионы, которые у нас есть
-	const accrodions = document.querySelectorAll('.faq__item')
-	// 2) Проходимся по ним, по всем аккордионам на странице
-	accrodions.forEach(el => {
-		// 3) Навешиваем событие клик на параметр (el)
-		el.addEventListener('click', (e) => {
-			// 4) создаем константу, которая содержит в себе конкретный элемент, на который нажали
-			// это делается для того, чтобы не писать постоянно e.currentTarget;
-			const self = e.currentTarget;
-			// 5) Находим текущий элемент (текущий аккордион {КНОПКУ АККОРДИОНА})
-			const control = self.querySelector('.faq__control');
-			// 6) Находим текущий элемент (текущий контент - что будет выпадать)
-			const content = self.querySelector('.faq__content');
-			// 7) Либо открывается, либо закрывается
-			self.classList.toggle('_open');
-			// 8) Чтобы сринридер работал корректно - по нажатию нужно менять атрибуты, создаем условие
-			//Если открыт аккордион
-			if (self.classList.contains('_open')) {
-				//поменяй атрибут на true
-				control.setAttribute('aria-expanded', true);
-				// а у контента сделай чтобы был виден
-				content.setAttribute('aria-hidden', false);
-				// Добавляем анимацию, находя высоту, которая складывается из того, что находится внутри
-				content.style.maxHeight = content.scrollHeight + 'px';
-				// Обратное действие этому else
-			} else {
-				control.setAttribute('aria-expanded', false);
-				content.setAttribute('aria-hidden', true);
-				// Убираем стили значением null
-				content.style.maxHeight = null;
-			}
-		});
-	});
-});
-
-// АККОРДЕОН АККОРДЕОН АККОРДЕОН АККОРДЕОН АККОРДЕОН АККОРДЕОН АККОРДЕОН АККОРДЕОН АККОРДЕОН АККОРДЕОН АККОРДЕОН
 
 // АНИМАЦИЯ АНИМАЦИЯ АНИМАЦИЯ АНИМАЦИЯ АНИМАЦИЯ АНИМАЦИЯ АНИМАЦИЯ АНИМАЦИЯ АНИМАЦИЯ АНИМАЦИЯ АНИМАЦИЯ АНИМАЦИЯ
 const animItems = document.querySelectorAll('._anim-items');
