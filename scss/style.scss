@@ -482,24 +482,25 @@ $greenColorHover: #448d3d;
 
 	&__body {
 		cursor: pointer;
+		border-radius: 12px;
 
 		&_1 {
-			background: url("../img/products/01.jpg") 0 0 / 100% 100% no-repeat;
+			background: url("../img/products/1.png") 0 0 / cover no-repeat;
 		}
 		&_2 {
-			background: url("../img/products/02.jpg") 0 0 / 100% 100% no-repeat;
+			background: url("../img/products/2.png") 0 0 / cover no-repeat;
 		}
 		&_3 {
-			background: url("../img/products/03.jpg") 0 0 / 100% 100% no-repeat;
+			background: url("../img/products/3.png") 0 0 / cover no-repeat;
 		}
 		&_4 {
-			background: url("../img/products/04.jpg") 0 0 / 100% 100% no-repeat;
+			background: url("../img/products/4.png") 0 0 / cover no-repeat;
 		}
 		&_5 {
-			background: url("../img/products/05.jpg") 0 0 / 100% 100% no-repeat;
+			background: url("../img/products/6.png") 0 0 / cover no-repeat;
 		}
 		&_6 {
-			background: url("../img/products/06.jpg") 0 0 / 100% 100% no-repeat;
+			background: url("../img/products/06.jpg") 0 0 / cover no-repeat;
 		}
 	}
 
@@ -1167,23 +1168,19 @@ $greenColorHover: #448d3d;
 		transform: scale(0);
 		transition: transform 0.3s ease 0s;
 		border-radius: 15px;
+		background-color: $whiteColor;
+
 		&_1 {
-			background: url("../img/products/popap/01.jpg") 0 0 / 100% 100% no-repeat;
-		}
-		&_2 {
-			background: url("../img/products/popap/02.jpg") 0 0 / 100% 100% no-repeat;
+			background: url("../img/products/1.png") 0 0 / cover no-repeat;
 		}
 		&_3 {
-			background: url("../img/products/popap/03.jpg") 0 0 / 100% 100% no-repeat;
+			background: url("../img/products/3.png") 0 0 / cover no-repeat;
 		}
 		&_4 {
-			background: url("../img/products/popap/04.jpg") 0 0 / 100% 100% no-repeat;
+			background: url("../img/products/4.png") 0 0 / cover no-repeat;
 		}
 		&_5 {
-			background: url("../img/products/popap/05.jpg") 0 0 / 100% 100% no-repeat;
-		}
-		&_6 {
-			background: url("../img/products/popap/06.jpg") 0 0 / 100% 100% no-repeat;
+			background: url("../img/products/6.png") 0 0 / cover no-repeat;
 		}
 	}
 
@@ -1227,6 +1224,28 @@ $greenColorHover: #448d3d;
 				margin-bottom: 15px;
 			}
 		}
+		&_black {
+			color: $lightGreyColor;
+			font-weight: 700;
+			font-size: 42px;
+			&:not(:last-child) {
+				margin-bottom: 45px;
+			}
+			@media (max-width: 992px) {
+				font-size: 28px;
+			}
+			@media (max-width: 767px) {
+				font-size: 24px;
+				&:not(:last-child) {
+					margin-bottom: 15px;
+				}
+			}
+		}
+		&_marg {
+			@media (max-width: 400px) {
+				padding-top: 25px;
+			}
+		}
 	}
 
 	&__content {
@@ -1259,12 +1278,24 @@ $greenColorHover: #448d3d;
 	// .content-modal-prod-1__row
 
 	&__row {
+		position: relative;
 		display: flex;
 		&:first-child {
 			margin-bottom: 20px;
 		}
 		&:not(:last-child) {
 			margin-bottom: 15px;
+		}
+		&:not(:first-child) {
+			&::after {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				border-bottom: 2px solid #fff;
+				bottom: -8px;
+				left: 0;
+			}
 		}
 	}
 
@@ -1296,6 +1327,7 @@ $greenColorHover: #448d3d;
 		&:not(:last-child) {
 			padding-right: 15px;
 		}
+		font-weight: 500;
 		width: 18.75%;
 		font-size: 16px;
 		color: $whiteColor;
@@ -1303,106 +1335,69 @@ $greenColorHover: #448d3d;
 			font-size: 14px;
 		}
 	}
+	//========================================================================================================================================================
+
+	// .content-modal-prod-1__flex
+
+	&__flex {
+		display: flex;
+		&:not(:last-child) {
+			margin-bottom: 50px;
+		}
+		@media (max-width: 767px) {
+			flex-direction: column;
+			row-gap: 15px;
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	// .content-modal-prod-1__text-block
+
+	&__text-block {
+		flex: 0 0 50%;
+		font-size: 18px;
+		color: $lightGreyColor;
+		padding-right: 30px;
+	}
+
+	// .content-modal-prod-1__label
+
+	&__label {
+		font-weight: 600;
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+		@media (max-width: 767px) {
+			font-size: 16px;
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	// .content-modal-prod-1__text
+
+	&__text {
+		font-weight: 500;
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+		@media (max-width: 767px) {
+			font-size: 16px;
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	// .content-modal-prod-1__image
+
+	&__image {
+		img {
+			object-fit: cover;
+			max-width: 100%;
+		}
+	}
 }
-
-// .content-modal-prod-1 {
-// 	// .content-modal-prod-1__wrapper
-
-// 	&__wrapper {
-// 		display: flex;
-// 		gap: 10px;
-// 		&:not(:last-child) {
-// 			margin-bottom: 50px;
-// 		}
-// 	}
-
-// 	// .content-modal-prod-1__column
-
-// 	&__column {
-// 	}
-
-// 	// .content-modal-prod-1__title
-
-// 	&__title {
-// 		color: $whiteColor;
-// 		font-size: 18px;
-// 		line-height: (22/18 * 100%);
-// 		font-weight: 600;
-// 		margin-bottom: 30px;
-// 		min-height: 50px;
-// 	}
-
-// 	&__body {
-// 	}
-
-// 	// .content-modal-prod-1__value
-
-// 	&__value {
-// 		font-size: 16px;
-// 		color: $whiteColor;
-// 		&:not(:last-child) {
-// 			margin-bottom: 15px;
-// 		}
-// 	}
-
-// 	// .content-modal-prod-1__btn
-
-// 	&__btn {
-// 		padding: 15px 60px;
-// 	}
-// }
-
-// .content-modal-prod-1 {
-// 	// .content-modal-prod-1__table
-
-// 	&__table {
-// 		width: 100%;
-// 	}
-
-// 	// .content-modal-prod-1__thead
-
-// 	&__thead {
-// 	}
-
-// 	// .content-modal-prod-1__table-row
-
-// 	&__table-row {
-// 		position: relative;
-// 		&:not(:first-child) {
-// 			&::after {
-// 				content: "";
-// 				position: absolute;
-// 				width: 100%;
-// 				height: 2px;
-// 				top: -50%;
-// 				left: 0;
-// 				border-bottom: 1px solid #fff;
-// 			}
-// 		}
-// 	}
-
-// 	// .content-modal-prod-1__title
-
-// 	&__title {
-// 		color: $whiteColor;
-// 		font-size: 18px;
-// 		line-height: (22/18 * 100%);
-// 		font-weight: 600;
-// 		max-width: 180px;
-// 		text-align: left;
-// 		padding-bottom: 20px;
-// 	}
-
-// 	// .content-modal-prod-1__tbody
-
-// 	&__tbody {
-// 	}
-
-// 	// .content-modal-prod-1__value
-
-// 	&__value {
-// 		font-size: 16px;
-// 		color: $whiteColor;
-// 		padding-bottom: 15px;
-// 	}
-// }
