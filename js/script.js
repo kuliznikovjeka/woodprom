@@ -18,7 +18,7 @@ document.querySelectorAll('a[href*="#"]').forEach(link => {
 
 		const scrollTagret = document.getElementById(href);
 
-		const topOffset = document.querySelector('.header').offsetHeight + 15;
+		const topOffset = document.querySelector('.header').offsetHeight;
 		if (window.innerWidth < 480) {
 			topOffset === 100;
 		}
@@ -29,7 +29,6 @@ document.querySelectorAll('a[href*="#"]').forEach(link => {
 			document.body.classList.remove('_lock');
 			menuBody.classList.remove('_active');
 			iconMenu.classList.remove('_active');
-
 		}
 
 		window.scrollBy({
@@ -81,6 +80,63 @@ document.getElementById('close-modal-6').addEventListener('click', function () {
 	document.getElementById('modal-prod-6').classList.remove('_open')
 })
 
+document.getElementById('open-modal-form').addEventListener('click', function () {
+	document.getElementById('modal-form').classList.add('_open')
+})
+document.getElementById('close-modal-form').addEventListener('click', function () {
+	document.getElementById('modal-form').classList.remove('_open')
+})
+// document.querySelector('#modal-form .form-application__box').addEventListener('click', event => {
+// 	event._isClickWithModal = true;
+// });
+// document.getElementById('modal-form').addEventListener('click', event => {
+// 	if (event._isClickWithModal) return;
+// 	event.currentTarget.classList.remove('_open');
+// })
+
+
+
+
+
+
+document.getElementById('open-modal-form-2').addEventListener('click', function () {
+	document.getElementById('modal-form-2').classList.add('_open')
+})
+document.getElementById('close-modal-form-2').addEventListener('click', function () {
+	document.getElementById('modal-form-2').classList.remove('_open')
+})
+document.getElementById('open-modal-form-3').addEventListener('click', function () {
+	document.getElementById('modal-form-3').classList.add('_open')
+})
+document.getElementById('close-modal-form-3').addEventListener('click', function () {
+	document.getElementById('modal-form-3').classList.remove('_open')
+})
+document.getElementById('open-modal-form-4').addEventListener('click', function () {
+	document.getElementById('modal-form-4').classList.add('_open')
+})
+document.getElementById('close-modal-form-4').addEventListener('click', function () {
+	document.getElementById('modal-form-4').classList.remove('_open')
+})
+document.getElementById('open-modal-form-5').addEventListener('click', function () {
+	document.getElementById('modal-form-5').classList.add('_open')
+})
+document.getElementById('close-modal-form-5').addEventListener('click', function () {
+	document.getElementById('modal-form-5').classList.remove('_open')
+})
+document.getElementById('open-modal-form-6').addEventListener('click', function () {
+	document.getElementById('modal-form-6').classList.add('_open')
+})
+document.getElementById('close-modal-form-6').addEventListener('click', function () {
+	document.getElementById('modal-form-6').classList.remove('_open')
+})
+document.getElementById('open-modal-form-7').addEventListener('click', function () {
+	document.getElementById('modal-form-7').classList.add('_open')
+})
+document.getElementById('close-modal-form-7').addEventListener('click', function () {
+	document.getElementById('modal-form-7').classList.remove('_open')
+})
+
+
 // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО
 
 
@@ -90,24 +146,15 @@ function initSliders() {
 
 		new Swiper('.promotions__slider.swiper', {
 			slidesPerView: 1,
-			// spaceBetween: 0,
 			loop: true,
-			// centeredSlides: true,
-			// autoplay: {
-			// 	delay: 1500,
-			// 	disableOnInteraction: false,
-			// },
-
 			// Навигация
 			navigation: {
 				nextEl: '.promotions__arrow.promotions__next',
 				prevEl: '.promotions__arrow.promotions__prev',
 			},
-
 		});
 	}
 }
-
 window.addEventListener("load", function (e) {
 	initSliders();
 });

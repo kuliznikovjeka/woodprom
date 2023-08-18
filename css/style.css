@@ -102,7 +102,7 @@ body._lock {
 }
 
 [class*="__container"] {
-  max-width: 1065px;
+  max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -348,10 +348,12 @@ body._lock {
 }
 
 .menu__link {
+  cursor: pointer;
   color: #fff;
   line-height: 125%;
   -webkit-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
+  font-size: 16px;
 }
 
 @media (any-hover: hover) {
@@ -511,6 +513,11 @@ body._lock {
   .main-page__desc:not(:last-child) {
     margin-bottom: 25px;
   }
+}
+
+.main-page__btn {
+  cursor: pointer;
+  display: inline-block;
 }
 
 @media (max-width: 550px) {
@@ -1538,6 +1545,10 @@ body._lock {
   }
 }
 
+.footer__link {
+  font-size: 16px;
+}
+
 .footer__link:not(:last-child) {
   margin-bottom: 20px;
 }
@@ -1588,7 +1599,7 @@ body._lock {
 
 .modal-prod-1__box {
   position: relative;
-  max-width: 1035px;
+  max-width: 1165px;
   width: 100%;
   z-index: 1;
   -webkit-transform: scale(0);
@@ -1602,19 +1613,19 @@ body._lock {
 }
 
 .modal-prod-1__box_1 {
-  background: url("../img/products/1.png") 0 0/cover no-repeat;
+  background: url("../img/products/popap-new/01.png") 0 0/cover no-repeat;
 }
 
 .modal-prod-1__box_3 {
-  background: url("../img/products/3.png") 0 0/cover no-repeat;
+  background: url("../img/products/popap-new/03.png") 0 0/cover no-repeat;
 }
 
 .modal-prod-1__box_4 {
-  background: url("../img/products/4.png") 0 0/cover no-repeat;
+  background: url("../img/products/popap-new/04.png") 0 0/cover no-repeat;
 }
 
 .modal-prod-1__box_5 {
-  background: url("../img/products/6.png") 0 0/cover no-repeat;
+  background: url("../img/products/popap-new/05.png") 0 0/cover no-repeat;
 }
 
 .modal-prod-1__body {
@@ -1869,4 +1880,164 @@ body._lock {
   -o-object-fit: cover;
      object-fit: cover;
   max-width: 100%;
+}
+
+.form-application {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99998;
+  background: rgba(0, 0, 0, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.form-application__box {
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  z-index: 1;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+.form-application__body {
+  padding: 30px;
+}
+
+@media (max-width: 550px) {
+  .form-application__body {
+    padding: 20px;
+  }
+}
+
+.form-application__close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: transparent;
+  padding: 5px;
+}
+
+@media (any-hover: hover) {
+  .form-application__close:hover path {
+    stroke: #252525;
+    -webkit-transition: stroke 0.3s ease 0s;
+    transition: stroke 0.3s ease 0s;
+  }
+}
+
+.form-application__title {
+  color: #4a4a4a;
+  font-weight: 600;
+  font-size: 36px;
+}
+
+.form-application__title:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 992px) {
+  .form-application__title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 767px) {
+  .form-application__title {
+    font-size: 24px;
+  }
+  .form-application__title:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+.form-application__desc {
+  font-size: 18px;
+  color: #4a4a4a;
+  font-weight: 500;
+  max-width: 380px;
+}
+
+.form-application__desc:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 550px) {
+  .form-application__desc {
+    font-size: 14px;
+  }
+}
+
+.form-application__form:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.form-application__input {
+  display: block;
+  border: 2px solid #59bb50;
+  border-radius: 12px;
+  padding: 15px 20px;
+  width: 100%;
+}
+
+.form-application__input:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.form-application__input::-webkit-input-placeholder {
+  font-size: 16px;
+}
+
+.form-application__input:-ms-input-placeholder {
+  font-size: 16px;
+}
+
+.form-application__input::-ms-input-placeholder {
+  font-size: 16px;
+}
+
+.form-application__input::placeholder {
+  font-size: 16px;
+}
+
+.form-application__data-processing {
+  font-size: 12px;
+  font-weight: 500;
+  color: #242424;
+  opacity: 0.85;
+}
+
+.form-application._open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.form-application._open .form-application__box {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }

@@ -21,7 +21,7 @@ $greenColorHover: #448d3d;
 
 // ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ
 [class*="__container"] {
-	max-width: 1065px;
+	max-width: 1200px;
 	padding: 0 15px;
 	margin: 0 auto;
 }
@@ -217,9 +217,11 @@ $greenColorHover: #448d3d;
 	// .menu__link
 
 	&__link {
+		cursor: pointer;
 		color: $whiteColor;
 		line-height: (25/20 * 100%);
 		transition: color 0.3s ease 0s;
+		font-size: 16px;
 		@media (any-hover: hover) {
 			&:hover {
 				color: $lightGreyColor;
@@ -359,6 +361,8 @@ $greenColorHover: #448d3d;
 	// .main-page__btn
 
 	&__btn {
+		cursor: pointer;
+		display: inline-block;
 		@media (max-width: 550px) {
 			display: flex;
 			justify-content: center;
@@ -1276,6 +1280,7 @@ $greenColorHover: #448d3d;
 	// .footer__link
 
 	&__link {
+		font-size: 16px;
 		&:not(:last-child) {
 			margin-bottom: 20px;
 		}
@@ -1315,7 +1320,7 @@ $greenColorHover: #448d3d;
 
 	&__box {
 		position: relative;
-		max-width: 1035px;
+		max-width: 1165px;
 		width: 100%;
 		z-index: 1;
 		transform: scale(0);
@@ -1324,16 +1329,16 @@ $greenColorHover: #448d3d;
 		background-color: $whiteColor;
 
 		&_1 {
-			background: url("../img/products/1.png") 0 0 / cover no-repeat;
+			background: url("../img/products/popap-new/01.png") 0 0 / cover no-repeat;
 		}
 		&_3 {
-			background: url("../img/products/3.png") 0 0 / cover no-repeat;
+			background: url("../img/products/popap-new/03.png") 0 0 / cover no-repeat;
 		}
 		&_4 {
-			background: url("../img/products/4.png") 0 0 / cover no-repeat;
+			background: url("../img/products/popap-new/04.png") 0 0 / cover no-repeat;
 		}
 		&_5 {
-			background: url("../img/products/6.png") 0 0 / cover no-repeat;
+			background: url("../img/products/popap-new/05.png") 0 0 / cover no-repeat;
 		}
 	}
 
@@ -1552,5 +1557,145 @@ $greenColorHover: #448d3d;
 			object-fit: cover;
 			max-width: 100%;
 		}
+	}
+}
+
+//========================================================================================================================================================
+
+.form-application {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 99998;
+	background: rgba(0, 0, 0, 0.4);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow-y: auto;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease 0s;
+	// .form-application__box
+
+	&__box {
+		position: relative;
+		max-width: 500px;
+		width: 100%;
+		z-index: 1;
+		transform: scale(0);
+		transition: transform 0.3s ease 0s;
+		border-radius: 15px;
+		background-color: $whiteColor;
+	}
+
+	// .form-application__body
+
+	&__body {
+		padding: 30px;
+		@media (max-width: 550px) {
+			padding: 20px;
+		}
+	}
+
+	// .form-application__close
+
+	&__close {
+		position: absolute;
+		top: 8px;
+		right: 8px;
+		background-color: transparent;
+		padding: 5px;
+		@media (any-hover: hover) {
+			&:hover {
+				path {
+					stroke: #252525;
+					transition: stroke 0.3s ease 0s;
+				}
+			}
+		}
+	}
+
+	// .form-application__title
+
+	&__title {
+		color: $lightGreyColor;
+		font-weight: 600;
+		font-size: 36px;
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+		@media (max-width: 992px) {
+			font-size: 28px;
+		}
+		@media (max-width: 767px) {
+			font-size: 24px;
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	// .form-application__desc
+
+	&__desc {
+		font-size: 18px;
+		color: $lightGreyColor;
+		font-weight: 500;
+		max-width: 380px;
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+		@media (max-width: 550px) {
+			font-size: 14px;
+		}
+	}
+
+	// .form-application__form
+
+	&__form {
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+
+	// .form-application__input
+
+	&__input {
+		display: block;
+		border: 2px solid $greenColor;
+		border-radius: 12px;
+		padding: 15px 20px;
+		width: 100%;
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+		&::placeholder {
+			font-size: 16px;
+		}
+	}
+
+	// .form-application__btn
+
+	&__btn {
+	}
+
+	// .form-application__data-processing
+
+	&__data-processing {
+		font-size: 12px;
+		font-weight: 500;
+		color: #242424;
+		opacity: 0.85;
+	}
+
+	&._open {
+		visibility: visible;
+		opacity: 1;
+	}
+	&._open &__box {
+		transform: scale(1);
 	}
 }
