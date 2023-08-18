@@ -102,6 +102,10 @@ $greenColorHover: #448d3d;
 // HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER
 .header {
 	background: $greenColor;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
 	// .header__container
 
 	&__container {
