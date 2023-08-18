@@ -11,30 +11,6 @@ body {
 	}
 }
 
-// АДАПТИВНОЕ СВОЙСТВО АДАПТИВНОЕ СВОЙСТВО АДАПТИВНОЕ СВОЙСТВО АДАПТИВНОЕ СВОЙСТВО АДАПТИВНОЕ СВОЙСТВО АДАПТИВНОЕ СВОЙСТВО АДАПТИВНОЕ СВОЙСТВО
-$maxWidth: 1920; // ширина макет
-$maxWidthContainer: 1320; //ширина контейнера
-@mixin adaptiveValue($property, $startSize, $minSize, $type) {
-	$addSize: $startSize -$minSize;
-	@if $type==1 {
-		// Только если меньше контейнера
-		#{$property}: $startSize + px;
-		@media ( max-width: #{$maxWidthContainer + px}) {
-			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
-		}
-	} @else if $type==2 {
-		// Только если больше контейнера
-		#{$property}: $startSize + px;
-		@media ( mшт-width: #{$maxWidthContainer + px}) {
-			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
-		}
-	} @else {
-		// Всегда
-		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
-	}
-}
-// АДАПТИВНОЕ СВОЙСТВО АДАПТИВНОЕ СВОЙСТВО АДАПТИВНОЕ СВОЙСТВО АДАПТИВНОЕ СВОЙСТВО АДАПТИВНОЕ СВОЙСТВО АДАПТИВНОЕ СВОЙСТВО АДАПТИВНОЕ СВОЙСТВО
-
 // ЦВЕТА ЦВЕТА ЦВЕТА ЦВЕТА ЦВЕТА ЦВЕТА ЦВЕТА ЦВЕТА ЦВЕТА ЦВЕТА ЦВЕТА ЦВЕТА ЦВЕТА ЦВЕТА ЦВЕТА ЦВЕТА ЦВЕТА ЦВЕТА ЦВЕТА ЦВЕТА ЦВЕТА ЦВЕТА ЦВЕТА ЦВЕТА
 $lightGreyColor: #4a4a4a;
 $blackColor: #252525;
@@ -55,9 +31,6 @@ $greenColorHover: #448d3d;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-}
-
-.main {
 }
 
 .btn {
@@ -96,16 +69,22 @@ $greenColorHover: #448d3d;
 	@media (max-width: 425px) {
 		font-size: 24px;
 	}
+	&_w {
+		color: $whiteColor;
+	}
 }
 // ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ ОБЩИЕ СТИЛИ
 
 // HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER
 .header {
+	z-index: 100;
 	background: $greenColor;
 	position: fixed;
 	width: 100%;
 	top: 0;
 	left: 0;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
 	// .header__container
 
 	&__container {
@@ -305,15 +284,12 @@ $greenColorHover: #448d3d;
 
 .main-page {
 	background: url("../img/main/bg.jpg") 0 0 / 100% 100% no-repeat;
-	min-height: 553px;
-	@media (max-width: 767px) {
-		min-height: 450px;
-	}
-	@media (max-width: 550px) {
-		min-height: 400px;
+	padding: 140px 0;
+	@media (max-width: 525px) {
+		padding: 70px 0;
 	}
 	@media (max-width: 425px) {
-		min-height: 280px;
+		padding: 65px 0 30px 0;
 	}
 
 	// .main-page__container
@@ -688,6 +664,179 @@ $greenColorHover: #448d3d;
 			font-size: 14px;
 			text-align: center;
 			display: block;
+		}
+	}
+}
+//========================================================================================================================================================
+
+.promotions {
+	background-color: $greenColor;
+	padding: 70px 0;
+
+	@media (max-width: 525px) {
+		padding: 25px 0;
+	}
+	@media (max-width: 425px) {
+		padding: 15px 0;
+	}
+	// .promotions__container
+
+	&__container {
+	}
+
+	// .promotions__title
+
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: 100px;
+		}
+		@media (max-width: 992px) {
+			&:not(:last-child) {
+				margin-bottom: 70px;
+			}
+		}
+		@media (max-width: 767px) {
+			&:not(:last-child) {
+				margin-bottom: 50px;
+			}
+		}
+		@media (max-width: 425px) {
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	// .promotions__slider
+
+	&__slider {
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+
+	// .promotions__wrapper
+
+	&__wrapper {
+	}
+
+	// .promotions__slide
+
+	&__slide {
+		cursor: grab;
+	}
+	//========================================================================================================================================================
+	// .promotions__arrows
+
+	&__arrows {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		column-gap: 30px;
+		@media (max-width: 550px) {
+			justify-content: center;
+		}
+	}
+
+	// .promotions__arrow
+
+	&__arrow {
+		background: transparent;
+		transition: all 0.3s ease 0s;
+		@media (max-width: 550px) {
+			image {
+				width: 80px;
+				height: 126px;
+			}
+		}
+	}
+
+	// .promotions__prev
+
+	&__prev {
+		transform: rotate(-180deg);
+	}
+
+	// .promotions__next
+
+	&__next {
+		padding-top: 4px;
+	}
+}
+
+.slide-promotions {
+	// .slide-promotions__row
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 30px;
+		@media (max-width: 767px) {
+			flex-direction: column-reverse;
+			align-items: start;
+		}
+	}
+
+	// .slide-promotions__img
+
+	&__img {
+		border-radius: 15px;
+		border: 3px solid #fff;
+		img {
+			max-width: 100%;
+			border-radius: 15px;
+		}
+	}
+
+	// .slide-promotions__body
+
+	&__body {
+		color: $whiteColor;
+		@media (min-width: 768px) {
+			width: 50%;
+		}
+		@media (max-width: 550px) {
+			text-align: center;
+		}
+	}
+
+	// .slide-promotions__title
+
+	&__title {
+		font-size: 32px;
+		line-height: (40/32 * 100%);
+		font-weight: 600;
+		&:not(:last-child) {
+			margin-bottom: 40px;
+		}
+		@media (max-width: 992px) {
+			font-size: 24px;
+		}
+		@media (max-width: 767px) {
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
+		}
+		@media (max-width: 550px) {
+			font-size: 16px;
+		}
+	}
+
+	// .slide-promotions__desc
+
+	&__desc {
+		font-size: 18px;
+		line-height: (22/18 * 100%);
+		font-weight: 500;
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+		@media (max-width: 992px) {
+			font-size: 16px;
+		}
+		@media (max-width: 550px) {
+			font-size: 14px;
 		}
 	}
 }

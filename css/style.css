@@ -172,12 +172,19 @@ body._lock {
   }
 }
 
+.title_w {
+  color: #fff;
+}
+
 .header {
+  z-index: 100;
   background: #59bb50;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .header__container {
@@ -416,24 +423,18 @@ body._lock {
 
 .main-page {
   background: url("../img/main/bg.jpg") 0 0/100% 100% no-repeat;
-  min-height: 553px;
+  padding: 140px 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 525px) {
   .main-page {
-    min-height: 450px;
-  }
-}
-
-@media (max-width: 550px) {
-  .main-page {
-    min-height: 400px;
+    padding: 70px 0;
   }
 }
 
 @media (max-width: 425px) {
   .main-page {
-    min-height: 280px;
+    padding: 65px 0 30px 0;
   }
 }
 
@@ -865,6 +866,199 @@ body._lock {
     font-size: 14px;
     text-align: center;
     display: block;
+  }
+}
+
+.promotions {
+  background-color: #59bb50;
+  padding: 70px 0;
+}
+
+@media (max-width: 525px) {
+  .promotions {
+    padding: 25px 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .promotions {
+    padding: 15px 0;
+  }
+}
+
+.promotions__title:not(:last-child) {
+  margin-bottom: 100px;
+}
+
+@media (max-width: 992px) {
+  .promotions__title:not(:last-child) {
+    margin-bottom: 70px;
+  }
+}
+
+@media (max-width: 767px) {
+  .promotions__title:not(:last-child) {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 425px) {
+  .promotions__title:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.promotions__slider:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.promotions__slide {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.promotions__arrows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+}
+
+@media (max-width: 550px) {
+  .promotions__arrows {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.promotions__arrow {
+  background: transparent;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+@media (max-width: 550px) {
+  .promotions__arrow image {
+    width: 80px;
+    height: 126px;
+  }
+}
+
+.promotions__prev {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.promotions__next {
+  padding-top: 4px;
+}
+
+.slide-promotions__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+
+@media (max-width: 767px) {
+  .slide-promotions__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+}
+
+.slide-promotions__img {
+  border-radius: 15px;
+  border: 3px solid #fff;
+}
+
+.slide-promotions__img img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+.slide-promotions__body {
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .slide-promotions__body {
+    width: 50%;
+  }
+}
+
+@media (max-width: 550px) {
+  .slide-promotions__body {
+    text-align: center;
+  }
+}
+
+.slide-promotions__title {
+  font-size: 32px;
+  line-height: 125%;
+  font-weight: 600;
+}
+
+.slide-promotions__title:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 992px) {
+  .slide-promotions__title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .slide-promotions__title:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 550px) {
+  .slide-promotions__title {
+    font-size: 16px;
+  }
+}
+
+.slide-promotions__desc {
+  font-size: 18px;
+  line-height: 122.22222%;
+  font-weight: 500;
+}
+
+.slide-promotions__desc:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 992px) {
+  .slide-promotions__desc {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 550px) {
+  .slide-promotions__desc {
+    font-size: 14px;
   }
 }
 
