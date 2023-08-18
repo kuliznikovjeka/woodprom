@@ -1359,7 +1359,7 @@ body._lock {
   font-weight: 600;
 }
 
-.modal {
+.modal-prod-1 {
   position: fixed;
   left: 0;
   top: 0;
@@ -1367,8 +1367,13 @@ body._lock {
   height: 100vh;
   z-index: 99998;
   background: rgba(0, 0, 0, 0.4);
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1382,22 +1387,32 @@ body._lock {
   transition: all 0.3s ease 0s;
 }
 
-.modal__box {
+.modal-prod-1__box {
   position: relative;
   max-width: 1035px;
-  padding: 50px;
+  width: 100%;
   z-index: 1;
-  margin: 30px 15px;
-  background-color: #fff;
   -webkit-transform: scale(0);
           transform: scale(0);
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  background: url("../img/products/popap/01.jpg") 0 0/100% 100% no-repeat;
+  border-radius: 15px;
 }
 
-.modal__close-btn {
+.modal-prod-1__body {
+  padding: 30px;
+}
+
+@media (max-width: 767px) {
+  .modal-prod-1__body {
+    padding: 15px;
+  }
+}
+
+.modal-prod-1__close {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -1405,12 +1420,123 @@ body._lock {
   padding: 5px;
 }
 
-.modal._open {
+@media (any-hover: hover) {
+  .modal-prod-1__close:hover path {
+    stroke: #252525;
+    -webkit-transition: stroke 0.3s ease 0s;
+    transition: stroke 0.3s ease 0s;
+  }
+}
+
+.modal-prod-1__title {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 125%;
+  color: #fff;
+}
+
+.modal-prod-1__title:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+@media (max-width: 992px) {
+  .modal-prod-1__title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 767px) {
+  .modal-prod-1__title {
+    font-size: 24px;
+  }
+  .modal-prod-1__title:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+.modal-prod-1._open {
   visibility: visible;
   opacity: 1;
 }
 
-.modal._open .modal__box {
+.modal-prod-1._open .modal-prod-1__box {
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+@media (max-width: 767px) {
+  .content-modal-prod-1 {
+    overflow-x: scroll;
+  }
+}
+
+.content-modal-prod-1__wrapper {
+  min-width: 740px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content-modal-prod-1__wrapper:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.content-modal-prod-1__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content-modal-prod-1__row:first-child {
+  margin-bottom: 20px;
+}
+
+.content-modal-prod-1__row:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.content-modal-prod-1__title {
+  width: 18.75%;
+  color: #fff;
+  font-size: 18px;
+  line-height: 122.22222%;
+  font-weight: 600;
+}
+
+.content-modal-prod-1__title:first-child {
+  width: 25%;
+}
+
+.content-modal-prod-1__title:not(:last-child) {
+  padding-right: 15px;
+}
+
+@media (max-width: 992px) {
+  .content-modal-prod-1__title {
+    font-size: 16px;
+  }
+}
+
+.content-modal-prod-1__value {
+  width: 18.75%;
+  font-size: 16px;
+  color: #fff;
+}
+
+.content-modal-prod-1__value:first-child {
+  width: 25%;
+}
+
+.content-modal-prod-1__value:not(:last-child) {
+  padding-right: 15px;
+}
+
+@media (max-width: 992px) {
+  .content-modal-prod-1__value {
+    font-size: 14px;
+  }
 }

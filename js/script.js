@@ -65,11 +65,11 @@ document.querySelectorAll('a[href*="#"]').forEach(link => {
 // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО
 
 document.getElementById('open-modal').addEventListener('click', function () {
-	document.getElementById('my-modal').classList.add('_open')
+	document.getElementById('modal-prod-1').classList.add('_open')
 })
 
-document.getElementById('close-my-modal-btn').addEventListener('click', function () {
-	document.getElementById('my-modal').classList.remove('_open')
+document.getElementById('close-modal').addEventListener('click', function () {
+	document.getElementById('modal-prod-1').classList.remove('_open')
 })
 
 // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО

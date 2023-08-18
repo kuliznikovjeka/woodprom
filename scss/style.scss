@@ -1140,7 +1140,7 @@ $greenColorHover: #448d3d;
 	}
 }
 
-.modal {
+.modal-prod-1 {
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -1148,7 +1148,8 @@ $greenColorHover: #448d3d;
 	height: 100vh;
 	z-index: 99998;
 	background: rgba(0, 0, 0, 0.4);
-	display: grid;
+	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	overflow-y: auto;
@@ -1161,24 +1162,57 @@ $greenColorHover: #448d3d;
 	&__box {
 		position: relative;
 		max-width: 1035px;
-		padding: 50px;
+		width: 100%;
 		z-index: 1;
-		margin: 30px 15px;
-		background-color: #fff;
 		transform: scale(0);
 		transition: transform 0.3s ease 0s;
+		background: url("../img/products/popap/01.jpg") 0 0 / 100% 100% no-repeat;
+		border-radius: 15px;
 	}
 
-	&__close-btn {
+	&__body {
+		padding: 30px;
+		@media (max-width: 767px) {
+			padding: 15px;
+		}
+	}
+
+	&__close {
 		position: absolute;
 		top: 8px;
 		right: 8px;
 		background-color: transparent;
 		padding: 5px;
+		@media (any-hover: hover) {
+			&:hover {
+				path {
+					stroke: #252525;
+					transition: stroke 0.3s ease 0s;
+				}
+			}
+		}
 	}
-	// .modal__window
+	// .modal__title
+	&__title {
+		font-size: 32px;
+		font-weight: 600;
+		line-height: (40/32 * 100%);
+		color: $whiteColor;
+		&:not(:last-child) {
+			margin-bottom: 25px;
+		}
+		@media (max-width: 992px) {
+			font-size: 28px;
+		}
+		@media (max-width: 767px) {
+			font-size: 24px;
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
+		}
+	}
 
-	&__window {
+	&__content {
 	}
 	&._open {
 		visibility: visible;
@@ -1188,3 +1222,170 @@ $greenColorHover: #448d3d;
 		transform: scale(1);
 	}
 }
+
+.content-modal-prod-1 {
+	@media (max-width: 767px) {
+		overflow-x: scroll;
+	}
+
+	// .content-modal-prod-1__wrapper
+
+	&__wrapper {
+		min-width: 740px;
+		display: flex;
+		flex-direction: column;
+		&:not(:last-child) {
+			margin-bottom: 50px;
+		}
+	}
+
+	// .content-modal-prod-1__row
+
+	&__row {
+		display: flex;
+		&:first-child {
+			margin-bottom: 20px;
+		}
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+
+	// .content-modal-prod-1__title
+
+	&__title {
+		&:first-child {
+			width: 25%;
+		}
+		&:not(:last-child) {
+			padding-right: 15px;
+		}
+		width: 18.75%;
+		color: $whiteColor;
+		font-size: 18px;
+		line-height: (22/18 * 100%);
+		font-weight: 600;
+		@media (max-width: 992px) {
+			font-size: 16px;
+		}
+	}
+
+	// .content-modal-prod-1__value
+
+	&__value {
+		&:first-child {
+			width: 25%;
+		}
+		&:not(:last-child) {
+			padding-right: 15px;
+		}
+		width: 18.75%;
+		font-size: 16px;
+		color: $whiteColor;
+		@media (max-width: 992px) {
+			font-size: 14px;
+		}
+	}
+}
+
+// .content-modal-prod-1 {
+// 	// .content-modal-prod-1__wrapper
+
+// 	&__wrapper {
+// 		display: flex;
+// 		gap: 10px;
+// 		&:not(:last-child) {
+// 			margin-bottom: 50px;
+// 		}
+// 	}
+
+// 	// .content-modal-prod-1__column
+
+// 	&__column {
+// 	}
+
+// 	// .content-modal-prod-1__title
+
+// 	&__title {
+// 		color: $whiteColor;
+// 		font-size: 18px;
+// 		line-height: (22/18 * 100%);
+// 		font-weight: 600;
+// 		margin-bottom: 30px;
+// 		min-height: 50px;
+// 	}
+
+// 	&__body {
+// 	}
+
+// 	// .content-modal-prod-1__value
+
+// 	&__value {
+// 		font-size: 16px;
+// 		color: $whiteColor;
+// 		&:not(:last-child) {
+// 			margin-bottom: 15px;
+// 		}
+// 	}
+
+// 	// .content-modal-prod-1__btn
+
+// 	&__btn {
+// 		padding: 15px 60px;
+// 	}
+// }
+
+// .content-modal-prod-1 {
+// 	// .content-modal-prod-1__table
+
+// 	&__table {
+// 		width: 100%;
+// 	}
+
+// 	// .content-modal-prod-1__thead
+
+// 	&__thead {
+// 	}
+
+// 	// .content-modal-prod-1__table-row
+
+// 	&__table-row {
+// 		position: relative;
+// 		&:not(:first-child) {
+// 			&::after {
+// 				content: "";
+// 				position: absolute;
+// 				width: 100%;
+// 				height: 2px;
+// 				top: -50%;
+// 				left: 0;
+// 				border-bottom: 1px solid #fff;
+// 			}
+// 		}
+// 	}
+
+// 	// .content-modal-prod-1__title
+
+// 	&__title {
+// 		color: $whiteColor;
+// 		font-size: 18px;
+// 		line-height: (22/18 * 100%);
+// 		font-weight: 600;
+// 		max-width: 180px;
+// 		text-align: left;
+// 		padding-bottom: 20px;
+// 	}
+
+// 	// .content-modal-prod-1__tbody
+
+// 	&__tbody {
+// 	}
+
+// 	// .content-modal-prod-1__value
+
+// 	&__value {
+// 		font-size: 16px;
+// 		color: $whiteColor;
+// 		padding-bottom: 15px;
+// 	}
+// }
