@@ -1398,8 +1398,31 @@ body._lock {
   transition: -webkit-transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
-  background: url("../img/products/popap/01.jpg") 0 0/100% 100% no-repeat;
   border-radius: 15px;
+}
+
+.modal-prod-1__box_1 {
+  background: url("../img/products/popap/01.jpg") 0 0/100% 100% no-repeat;
+}
+
+.modal-prod-1__box_2 {
+  background: url("../img/products/popap/02.jpg") 0 0/100% 100% no-repeat;
+}
+
+.modal-prod-1__box_3 {
+  background: url("../img/products/popap/03.jpg") 0 0/100% 100% no-repeat;
+}
+
+.modal-prod-1__box_4 {
+  background: url("../img/products/popap/04.jpg") 0 0/100% 100% no-repeat;
+}
+
+.modal-prod-1__box_5 {
+  background: url("../img/products/popap/05.jpg") 0 0/100% 100% no-repeat;
+}
+
+.modal-prod-1__box_6 {
+  background: url("../img/products/popap/06.jpg") 0 0/100% 100% no-repeat;
 }
 
 .modal-prod-1__body {

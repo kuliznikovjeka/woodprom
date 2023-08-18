@@ -1166,8 +1166,25 @@ $greenColorHover: #448d3d;
 		z-index: 1;
 		transform: scale(0);
 		transition: transform 0.3s ease 0s;
-		background: url("../img/products/popap/01.jpg") 0 0 / 100% 100% no-repeat;
 		border-radius: 15px;
+		&_1 {
+			background: url("../img/products/popap/01.jpg") 0 0 / 100% 100% no-repeat;
+		}
+		&_2 {
+			background: url("../img/products/popap/02.jpg") 0 0 / 100% 100% no-repeat;
+		}
+		&_3 {
+			background: url("../img/products/popap/03.jpg") 0 0 / 100% 100% no-repeat;
+		}
+		&_4 {
+			background: url("../img/products/popap/04.jpg") 0 0 / 100% 100% no-repeat;
+		}
+		&_5 {
+			background: url("../img/products/popap/05.jpg") 0 0 / 100% 100% no-repeat;
+		}
+		&_6 {
+			background: url("../img/products/popap/06.jpg") 0 0 / 100% 100% no-repeat;
+		}
 	}
 
 	&__body {

@@ -67,10 +67,40 @@ document.querySelectorAll('a[href*="#"]').forEach(link => {
 document.getElementById('open-modal').addEventListener('click', function () {
 	document.getElementById('modal-prod-1').classList.add('_open')
 })
-
 document.getElementById('close-modal').addEventListener('click', function () {
 	document.getElementById('modal-prod-1').classList.remove('_open')
 })
+document.getElementById('open-modal-2').addEventListener('click', function () {
+	document.getElementById('modal-prod-2').classList.add('_open')
+})
+document.getElementById('close-modal-2').addEventListener('click', function () {
+	document.getElementById('modal-prod-2').classList.remove('_open')
+})
+document.getElementById('open-modal-3').addEventListener('click', function () {
+	document.getElementById('modal-prod-3').classList.add('_open')
+})
+document.getElementById('close-modal-3').addEventListener('click', function () {
+	document.getElementById('modal-prod-3').classList.remove('_open')
+})
+document.getElementById('open-modal-4').addEventListener('click', function () {
+	document.getElementById('modal-prod-4').classList.add('_open')
+})
+document.getElementById('close-modal-4').addEventListener('click', function () {
+	document.getElementById('modal-prod-4').classList.remove('_open')
+})
+document.getElementById('open-modal-5').addEventListener('click', function () {
+	document.getElementById('modal-prod-5').classList.add('_open')
+})
+document.getElementById('close-modal-5').addEventListener('click', function () {
+	document.getElementById('modal-prod-5').classList.remove('_open')
+})
+document.getElementById('open-modal-6').addEventListener('click', function () {
+	document.getElementById('modal-prod-6').classList.add('_open')
+})
+document.getElementById('close-modal-6').addEventListener('click', function () {
+	document.getElementById('modal-prod-6').classList.remove('_open')
+})
+
 
 // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО
 
