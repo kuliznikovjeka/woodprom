@@ -43,36 +43,172 @@ document.querySelectorAll('a[href*="#"]').forEach(link => {
 
 // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО
 
+
+
+
+
+
+
+
+const form = document.getElementById('open-modal-form');
+document.getElementById('open-modal-form').addEventListener('click', function () {
+	document.getElementById('modal-form').classList.add('_open')
+})
+document.getElementById('close-modal-form').addEventListener('click', function () {
+	document.getElementById('modal-form').classList.remove('_open')
+})
+
+
+
+
+
+//========================================================================================================================================================
 document.getElementById('open-modal').addEventListener('click', function () {
 	document.getElementById('modal-prod-1').classList.add('_open')
 })
 document.getElementById('close-modal').addEventListener('click', function () {
 	document.getElementById('modal-prod-1').classList.remove('_open')
 })
+
+document.getElementById('open-modal-form-2').addEventListener('click', function () {
+	document.getElementById('modal-form-2').classList.add('_open');
+	document.getElementById('modal-prod-1').classList.remove('_open');
+})
+document.getElementById('close-modal-form-2').addEventListener('click', function () {
+	document.getElementById('modal-form-2').classList.remove('_open')
+})
+//========================================================================================================================================================
 document.getElementById('open-modal-2').addEventListener('click', function () {
 	document.getElementById('modal-prod-2').classList.add('_open')
 })
 document.getElementById('close-modal-2').addEventListener('click', function () {
 	document.getElementById('modal-prod-2').classList.remove('_open')
 })
+
+document.getElementById('open-modal-form-3').addEventListener('click', function () {
+	document.getElementById('modal-form-3').classList.add('_open')
+	document.getElementById('modal-prod-2').classList.remove('_open');
+
+})
+document.getElementById('close-modal-form-3').addEventListener('click', function () {
+	document.getElementById('modal-form-3').classList.remove('_open')
+})
+
+//========================================================================================================================================================
+document.getElementById('open-modal-header-drova').addEventListener('click', function () {
+	document.getElementById('modal-prod-header-drova').classList.add('_open')
+})
+document.getElementById('close-modal-header-drova').addEventListener('click', function () {
+	document.getElementById('modal-prod-header-drova').classList.remove('_open')
+})
+
+document.getElementById('open-modal-form-header-drova').addEventListener('click', function () {
+	document.getElementById('modal-form-header-drova').classList.add('_open')
+	document.getElementById('modal-prod-header-drova').classList.remove('_open');
+
+})
+document.getElementById('close-modal-form-header-drova').addEventListener('click', function () {
+	document.getElementById('modal-form-header-drova').classList.remove('_open')
+})
+
+//========================================================================================================================================================
+
+document.getElementById('open-modal-footer-drova').addEventListener('click', function () {
+	document.getElementById('modal-prod-footer-drova').classList.add('_open')
+})
+document.getElementById('close-modal-footer-drova').addEventListener('click', function () {
+	document.getElementById('modal-prod-footer-drova').classList.remove('_open')
+})
+
+document.getElementById('open-modal-form-footer-drova').addEventListener('click', function () {
+	document.getElementById('modal-form-footer-drova').classList.add('_open')
+	document.getElementById('modal-prod-footer-drova').classList.remove('_open');
+})
+document.getElementById('close-modal-form-footer-drova').addEventListener('click', function () {
+	document.getElementById('modal-form-footer-drova').classList.remove('_open')
+})
+//========================================================================================================================================================
+document.getElementById('open-modal-header-ant').addEventListener('click', function () {
+	document.getElementById('modal-prod-header-ant').classList.add('_open')
+})
+document.getElementById('close-modal-header-ant').addEventListener('click', function () {
+	document.getElementById('modal-prod-header-ant').classList.remove('_open')
+})
+
+document.getElementById('open-modal-form-header-ant').addEventListener('click', function () {
+	document.getElementById('modal-form-header-ant').classList.add('_open')
+	document.getElementById('modal-prod-header-ant').classList.remove('_open');
+
+})
+document.getElementById('close-modal-form-header-ant').addEventListener('click', function () {
+	document.getElementById('modal-form-header-ant').classList.remove('_open')
+})
+//========================================================================================================================================================
+
+document.getElementById('open-modal-footer-ant').addEventListener('click', function () {
+	document.getElementById('modal-prod-footer-ant').classList.add('_open')
+})
+document.getElementById('close-modal-footer-ant').addEventListener('click', function () {
+	document.getElementById('modal-prod-footer-ant').classList.remove('_open')
+})
+
+document.getElementById('open-modal-form-footer-ant').addEventListener('click', function () {
+	document.getElementById('modal-form-footer-ant').classList.add('_open');
+	document.getElementById('modal-prod-footer-ant').classList.remove('_open');
+
+})
+document.getElementById('close-modal-form-footer-ant').addEventListener('click', function () {
+	document.getElementById('modal-form-footer-ant').classList.remove('_open')
+})
+
+//========================================================================================================================================================
+
+
 document.getElementById('open-modal-3').addEventListener('click', function () {
 	document.getElementById('modal-prod-3').classList.add('_open')
 })
 document.getElementById('close-modal-3').addEventListener('click', function () {
 	document.getElementById('modal-prod-3').classList.remove('_open')
 })
+
+document.getElementById('open-modal-form-4').addEventListener('click', function () {
+	document.getElementById('modal-form-4').classList.add('_open')
+	document.getElementById('modal-prod-3').classList.remove('_open');
+})
+document.getElementById('close-modal-form-4').addEventListener('click', function () {
+	document.getElementById('modal-form-4').classList.remove('_open')
+})
+//========================================================================================================================================================
 document.getElementById('open-modal-4').addEventListener('click', function () {
 	document.getElementById('modal-prod-4').classList.add('_open')
 })
 document.getElementById('close-modal-4').addEventListener('click', function () {
 	document.getElementById('modal-prod-4').classList.remove('_open')
 })
+
+document.getElementById('open-modal-form-5').addEventListener('click', function () {
+	document.getElementById('modal-form-5').classList.add('_open')
+	document.getElementById('modal-prod-4').classList.remove('_open');
+})
+document.getElementById('close-modal-form-5').addEventListener('click', function () {
+	document.getElementById('modal-form-5').classList.remove('_open')
+})
+//========================================================================================================================================================
 document.getElementById('open-modal-5').addEventListener('click', function () {
 	document.getElementById('modal-prod-5').classList.add('_open')
 })
 document.getElementById('close-modal-5').addEventListener('click', function () {
 	document.getElementById('modal-prod-5').classList.remove('_open')
 })
+
+document.getElementById('open-modal-form-6').addEventListener('click', function () {
+	document.getElementById('modal-form-6').classList.add('_open')
+	document.getElementById('modal-prod-5').classList.remove('_open');
+})
+document.getElementById('close-modal-form-6').addEventListener('click', function () {
+	document.getElementById('modal-form-6').classList.remove('_open')
+})
+//========================================================================================================================================================
 document.getElementById('open-modal-6').addEventListener('click', function () {
 	document.getElementById('modal-prod-6').classList.add('_open')
 })
@@ -80,61 +216,14 @@ document.getElementById('close-modal-6').addEventListener('click', function () {
 	document.getElementById('modal-prod-6').classList.remove('_open')
 })
 
-document.getElementById('open-modal-form').addEventListener('click', function () {
-	document.getElementById('modal-form').classList.add('_open')
-})
-document.getElementById('close-modal-form').addEventListener('click', function () {
-	document.getElementById('modal-form').classList.remove('_open')
-})
-// document.querySelector('#modal-form .form-application__box').addEventListener('click', event => {
-// 	event._isClickWithModal = true;
-// });
-// document.getElementById('modal-form').addEventListener('click', event => {
-// 	if (event._isClickWithModal) return;
-// 	event.currentTarget.classList.remove('_open');
-// })
-
-
-
-
-
-
-document.getElementById('open-modal-form-2').addEventListener('click', function () {
-	document.getElementById('modal-form-2').classList.add('_open')
-})
-document.getElementById('close-modal-form-2').addEventListener('click', function () {
-	document.getElementById('modal-form-2').classList.remove('_open')
-})
-document.getElementById('open-modal-form-3').addEventListener('click', function () {
-	document.getElementById('modal-form-3').classList.add('_open')
-})
-document.getElementById('close-modal-form-3').addEventListener('click', function () {
-	document.getElementById('modal-form-3').classList.remove('_open')
-})
-document.getElementById('open-modal-form-4').addEventListener('click', function () {
-	document.getElementById('modal-form-4').classList.add('_open')
-})
-document.getElementById('close-modal-form-4').addEventListener('click', function () {
-	document.getElementById('modal-form-4').classList.remove('_open')
-})
-document.getElementById('open-modal-form-5').addEventListener('click', function () {
-	document.getElementById('modal-form-5').classList.add('_open')
-})
-document.getElementById('close-modal-form-5').addEventListener('click', function () {
-	document.getElementById('modal-form-5').classList.remove('_open')
-})
-document.getElementById('open-modal-form-6').addEventListener('click', function () {
-	document.getElementById('modal-form-6').classList.add('_open')
-})
-document.getElementById('close-modal-form-6').addEventListener('click', function () {
-	document.getElementById('modal-form-6').classList.remove('_open')
-})
 document.getElementById('open-modal-form-7').addEventListener('click', function () {
 	document.getElementById('modal-form-7').classList.add('_open')
+	document.getElementById('modal-prod-6').classList.remove('_open');
 })
 document.getElementById('close-modal-form-7').addEventListener('click', function () {
 	document.getElementById('modal-form-7').classList.remove('_open')
 })
+//========================================================================================================================================================
 
 
 // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО

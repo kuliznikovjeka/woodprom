@@ -1280,7 +1280,15 @@ $greenColorHover: #448d3d;
 	// .footer__link
 
 	&__link {
+		cursor: pointer;
+		color: $whiteColor;
+		transition: color 0.3s ease 0s;
 		font-size: 16px;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $lightGreyColor;
+			}
+		}
 		&:not(:last-child) {
 			margin-bottom: 20px;
 		}

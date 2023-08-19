@@ -1546,7 +1546,17 @@ body._lock {
 }
 
 .footer__link {
+  cursor: pointer;
+  color: #fff;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
   font-size: 16px;
+}
+
+@media (any-hover: hover) {
+  .footer__link:hover {
+    color: #4a4a4a;
+  }
 }
 
 .footer__link:not(:last-child) {
