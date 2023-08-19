@@ -1638,6 +1638,64 @@ body._lock {
   background: url("../img/products/popap-new/05.png") 0 0/cover no-repeat;
 }
 
+.modal-prod-1__box_big {
+  top: 10%;
+}
+
+@media (max-width: 1100px) {
+  .modal-prod-1__box_big {
+    top: 20%;
+  }
+}
+
+@media (max-width: 870px) {
+  .modal-prod-1__box_big {
+    top: 30%;
+  }
+}
+
+@media (max-width: 767px) {
+  .modal-prod-1__box_big {
+    top: 40%;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal-prod-1__box_big {
+    top: 50%;
+  }
+}
+
+@media (max-width: 525px) {
+  .modal-prod-1__box_big {
+    top: 60%;
+  }
+}
+
+@media (max-width: 450px) {
+  .modal-prod-1__box_big {
+    top: 70%;
+  }
+}
+
+@media (max-width: 400px) {
+  .modal-prod-1__box_big {
+    top: 90%;
+  }
+}
+
+@media (max-width: 360px) {
+  .modal-prod-1__box_big {
+    top: 100%;
+  }
+}
+
+@media (max-width: 330px) {
+  .modal-prod-1__box_big {
+    top: 110%;
+  }
+}
+
 .modal-prod-1__body {
   padding: 30px;
 }
@@ -1753,6 +1811,7 @@ body._lock {
 @media (max-width: 767px) {
   .modal-prod-1__main-title {
     font-size: 20px;
+    margin-top: 30px;
   }
   .modal-prod-1__main-title:not(:last-child) {
     margin-bottom: 30px;

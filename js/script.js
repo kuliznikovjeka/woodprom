@@ -168,7 +168,6 @@ document.getElementById('open-modal-header-egais').addEventListener('click', fun
 document.getElementById('close-modal-header-egais').addEventListener('click', function () {
 	document.getElementById('modal-prod-header-egais').classList.remove('_open')
 })
-
 //========================================================================================================================================================
 
 
