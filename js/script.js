@@ -169,6 +169,13 @@ document.getElementById('close-modal-header-egais').addEventListener('click', fu
 	document.getElementById('modal-prod-header-egais').classList.remove('_open')
 })
 //========================================================================================================================================================
+document.getElementById('open-modal-footer-egais').addEventListener('click', function () {
+	document.getElementById('modal-prod-footer-egais').classList.add('_open')
+})
+document.getElementById('close-modal-footer-egais').addEventListener('click', function () {
+	document.getElementById('modal-prod-footer-egais').classList.remove('_open')
+})
+//========================================================================================================================================================
 
 
 document.getElementById('open-modal-3').addEventListener('click', function () {
