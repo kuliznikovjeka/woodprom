@@ -1620,6 +1620,8 @@ body._lock {
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
   border-radius: 15px;
   background-color: #fff;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .modal-prod-1__box_1 {
@@ -1636,10 +1638,6 @@ body._lock {
 
 .modal-prod-1__box_5 {
   background: url("../img/products/popap-new/05.png") 0 0/cover no-repeat;
-}
-
-.modal-prod-1__box_big {
-  top: 100vh;
 }
 
 .modal-prod-1__body {

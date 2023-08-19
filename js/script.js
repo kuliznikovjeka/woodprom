@@ -43,13 +43,6 @@ document.querySelectorAll('a[href*="#"]').forEach(link => {
 
 // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО // МОДАЛЬНОЕ ОКНО
 
-
-
-
-
-
-
-
 const form = document.getElementById('open-modal-form');
 document.getElementById('open-modal-form').addEventListener('click', function () {
 	document.getElementById('modal-form').classList.add('_open')
